@@ -8,7 +8,7 @@ from pibooth_bot import PiBoothBot
 try:
     ( 
         foldercharacter = "\\"
-        if settings.OS == "linux"
+        if settings.OS == "linux":
             foldercharacter = "/"
         PiBoothBot([{'upload': settings.PICTURE_DIRECTORY + foldercharacter + sys.argv[1]}],
                     lambda: os.rename(settings.PICTURE_DIRECTORY + foldercharacter + sys.argv[1], settings.PICTURE_DIRECTORY + foldercharacter + "uploaded" + foldercharacter + sys.argv[1]))
