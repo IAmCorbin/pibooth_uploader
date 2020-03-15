@@ -30,7 +30,7 @@ class PiBoothUploader():
         for picture in [p for p in os.listdir(settings.PICTURE_DIRECTORY) if ".jpg" in p]:
             try:
                 logging.info("[" + now + "] Found some pictures to upload! Uploading . . .")
-                retcode = subprocess.call("python request_pibooth_bot_upload.py" + ' ' + picture, shell=True)
+                retcode = subprocess.call("python3 request_pibooth_bot_upload.py" + ' ' + picture, shell=True)
                 if retcode < 0:
                     print("Child was terminated by signal", -retcode, file=sys.stderr)
                     logging.warning("[" + now + "] Child was terminated by signal. Return Code: " + retcode )
