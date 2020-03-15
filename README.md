@@ -9,6 +9,9 @@ We are using it with pibooth to automatically upload photobooth pictures to our 
 This bot uses discord.py as a wrapper for the discord api
 https://pypi.org/project/discord.py/
 
+### schedule
+To manage the scheduled task
+https://github.com/dbader/schedule
 
 ## Usage
 Set your values in settings.py
