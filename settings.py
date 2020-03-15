@@ -1,3 +1,5 @@
+#Set to 'linux' or 'windows'
+OS = 'linux'
 TOKEN = 'Discord Bot Token Here'
 SERVER_NAME = 'Server Name Here'
 CHANNEL_NAME = 'Channel Name Here'
