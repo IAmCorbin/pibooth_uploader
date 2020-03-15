@@ -10,10 +10,13 @@ import logging
 class PiBoothUploader():
 
     def __init__(self):
+        foldercharacter = "\\"
+        if settings.OS == "linux":
+            foldercharacter = "/"
         self._count = 0
         now = dt.now().strftime("%Y%m%d%H%M")
         today = dt.now().strftime("%Y%m%d")
-        logging.basicConfig(filename="pibooth_uploader." + today + ".log",level=logging.INFO)
+        logging.basicConfig(filename=settings.LOGGING_DIRETORY + foldercharacter + "pibooth_uploader." + today + ".log",level=logging.INFO)
         logging.info("[" + now + "] Pibooth uploader started." )
 
     def run(self):

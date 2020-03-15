@@ -16,5 +16,5 @@ try:
     )
 except:
     today = dt.now().strftime("%Y%m%d")
-    logging.basicConfig(filename="pibooth_uploader." + today + ".log",level=logging.INFO)
+    logging.basicConfig(filename=settings.LOGGING_DIRETORY + foldercharacter + "pibooth_uploader." + today + ".log",level=logging.INFO)
     logging.exception("There was an error uploading file: " + settings.PICTURE_DIRECTORY + foldercharacter + sys.argv[1])
